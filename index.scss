@@ -1,0 +1,61 @@
+@import "_colors";
+@import "_buttons";
+@import "_para";
+@import "_bgcolor";
+@import "_variables";
+@import "_utility";
+
+$primary: yellow;
+$secondary:white;
+$font-family:'Roboto','sans-serif';
+$font-size:1rem;
+
+body {
+    background-color: yellow;
+    margin: 0;
+}
+h2 {
+    text-align: center;
+    color: $primary;
+    font-size: $font-size;
+    text-decoration: none;
+    font-size: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+p {
+    color: brown;
+    font-size: $font-size;
+    background-color: $secondary;
+    line-height: 30px;
+}
+    
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        text-align: center;
+        padding: 10px;
+    
+
+        a {
+            color: rgb(20, 169, 218);
+            font-size: $font-size;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            text-align: center;
+            &:last-child{
+                color: aqua;
+            }
+            &:nth-child(2){
+                color: red;
+            }
+            &:hover{
+                background-color: #555;
+            }
+        }
+    }
+
+
+

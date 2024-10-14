@@ -1,0 +1,24 @@
+$padding:5px;
+$utilities:(
+    "padding":(
+        "prefix":"p",
+        "values":(
+            "0":0,
+            "1":$padding *2,
+            "2":$padding *4,
+            "3":$padding *6,      
+         ),
+    ),
+);
+
+@each $key, $value in $utilities {
+    $prefix:map-get($value, "prefix");
+    @debug $prefix;
+    $values:map-get($value, "values");
+    @debug $values;
+    @each $key, $value in $values{
+        .#{$prefix} -#{prefix}{
+            padding: $value;
+        }
+    }
+}
